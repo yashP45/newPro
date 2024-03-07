@@ -23,7 +23,7 @@ io.on("connection", (socket) => {
  
   socket.on("authenticate", ({ username, password }) => {
     console.log(username, password);
-    if (username === "sharedUsername" && password === "sharedPassword") {
+    if (username == "yash" && password == "pass") {
       // Authentication successful
       console.log("Correct password");
       socket.emit("authenticated", true);
