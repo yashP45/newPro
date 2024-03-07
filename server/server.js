@@ -19,7 +19,7 @@ server.listen(port, () => {
 
 
 io.on("connection", (socket) => {
-  console.log("A user connected");
+  console.log("A user connected" , socket.id);
  
   socket.on("authenticate", ({ username, password }) => {
     console.log(username, password);
