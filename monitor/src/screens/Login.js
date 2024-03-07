@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
-import {io} from 'socket.io-client';
+
 const Login = ({navigation}) => {
   const [open, setOpen] = useState(false);
 
@@ -10,8 +10,7 @@ const Login = ({navigation}) => {
     {label: 'Child', value: 'Child'},
     {label: 'Parent ', value: 'Parent'},
   ]);
-  const socket = io('http://localhost:3000');
-  console.log(socket)
+
   const handleButtonClick = () => {
     if (value === 'Child') {
       navigation.navigate('Child');

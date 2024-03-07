@@ -11,7 +11,7 @@ require("dotenv").config();
 const io = new Server(server, {
   cors: "*",
 });
-const port = process.env.PORT ||8000
+const port = process.env.PORT || 8000
 server.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
@@ -19,7 +19,7 @@ server.listen(port, () => {
 
 
 io.on("connection", (socket) => {
-  console.log("A user connected", socket);
+  console.log("A user connected");
  
   socket.on("authenticate", ({ username, password }) => {
     console.log(username, password);

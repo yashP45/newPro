@@ -7,7 +7,7 @@ const Child = () => {
   const [authenticated, setAuthenticated] = useState(false);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const socket = io('http://localhost:3000');
+  const socket = io('https://newpro-6b8t.onrender.com');
  
   const authenticate = () => {
     // Authenticate with the server
