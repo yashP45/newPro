@@ -4,7 +4,6 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Child from '../screens/Child';
 import Parent from '../screens/Parent';
 import Login from '../screens/Login';
-import Onboarding from '../screens/Onboarding';
 
 const Stack = createNativeStackNavigator();
 const Routes = () => {
@@ -12,11 +11,10 @@ const Routes = () => {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{headerShown: false}}
-        initialRouteName="Onboard">
+        initialRouteName="Login">
         <Stack.Screen name="Child" component={Child} />
         <Stack.Screen name="Parent" component={Parent} />
         <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="OnBoard" component={Onboarding} />
       </Stack.Navigator>
     </NavigationContainer>
   );

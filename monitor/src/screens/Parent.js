@@ -1,7 +1,7 @@
 // Parent app code
 import React, {useState} from 'react';
 import {Text, TextInput, Button, View} from 'react-native';
-import io from 'socket.io-client';
+import {io} from 'socket.io-client';
 
 const ParentApp = () => {
   const [authenticated, setAuthenticated] = useState(false);
@@ -10,7 +10,7 @@ const ParentApp = () => {
   const [role, setRole] = useState(null);
 
   const authenticate = () => {
-    const socket = io('http://your-server-ip:3000'); // Replace with your server address
+    const socket = io('http://localhost:3000/'); // Replace with your server address
 
     // Authenticate with the server
     socket.emit('authenticate', {username, password});
